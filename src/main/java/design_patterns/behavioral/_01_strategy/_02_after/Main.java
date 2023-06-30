@@ -1,10 +1,11 @@
-package main.java.design_patterns.behavioral._01_strategy._01_before;
+package main.java.design_patterns.behavioral._01_strategy._02_after;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        Robot taekwonV = new TaekwonV("mango");
-        Robot atom = new Atom("kaye");
+        Robot taekwonV = new Robot("mango", new FlyingStrategy(),new PunchStrategy());
+        Robot atom = new Robot("kaye", new WalkingStrategy(), new MissileStrategy());
 
         System.out.println("My name is " + taekwonV.getName());
         taekwonV.move();
