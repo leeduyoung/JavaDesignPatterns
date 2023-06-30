@@ -1,4 +1,4 @@
-package main.java.design_patterns.behavioral._01_strategy._01_before;
+package main.java.design_patterns.behavioral.strategy._01_before;
 
 public class TaekwonV extends Robot {
 
@@ -16,4 +16,3 @@ public class TaekwonV extends Robot {
         System.out.println("I can only walk");
     }
 }
-
