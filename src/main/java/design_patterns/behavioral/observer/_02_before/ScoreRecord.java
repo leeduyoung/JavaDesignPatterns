@@ -6,14 +6,20 @@ import java.util.List;
 public class ScoreRecord {
     private List scores = new ArrayList<Integer>(); // 점수를 저장
     private DataSheetView dataSheetView; // 목록 형태로 점수를 출력하는 클래스
+    private MinMaxView minMaxView;
 
     public void setDataSheetView(DataSheetView dataSheetView) {
         this.dataSheetView = dataSheetView;
     }
 
+    public void setStatisticsView(MinMaxView minMaxView) {
+        this.minMaxView = minMaxView;
+    }
+
     public void addScore(int score) {
         scores.add(score);
         dataSheetView.update();
+        minMaxView.update();
     }
 
     public List<Integer> getScoreRecord() {
